@@ -1,0 +1,21 @@
+# List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
+tasks:
+  - init: npm install # runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
+    command: npm run dev
+
+# List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
+ports:
+  - name: Astro Dev Server
+    description: open Astro Dev Server at port 4321
+    port: 4321
+    onOpen: open-browser
+
+# Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
+
+vscode:
+  extensions:
+    - astro-build.astro-vscode
+    - bradlc.vscode-tailwindcss
+    - github.vscode-github-actions
+    - astro-build.houston
+    - vscode-icons-team.vscode-icons
