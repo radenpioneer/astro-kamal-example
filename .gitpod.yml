@@ -1,3 +1,4 @@
+---
 # List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
 tasks:
   - init: npm install # runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
@@ -11,7 +12,6 @@ ports:
     onOpen: open-browser
 
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
-
 vscode:
   extensions:
     - astro-build.astro-vscode
@@ -19,3 +19,4 @@ vscode:
     - github.vscode-github-actions
     - astro-build.houston
     - vscode-icons-team.vscode-icons
+    - ms-azuretools.vscode-docker
