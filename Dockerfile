@@ -10,7 +10,7 @@ RUN bun install --frozen-lockfile
 
 FROM build-deps AS build
 COPY . .
-RUN bun run build:docker
+RUN bun run build
 
 FROM oven/bun:1.1.34-slim AS runtime
 WORKDIR /app
