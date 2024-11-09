@@ -17,8 +17,8 @@ ports:
     port: 4321
     onOpen: open-browser
   - name: Astro Container Test Server
-    description: open Astro Dev Server at port 4322
-    port: 4322
+    description: open Astro Test Server at port 8080
+    port: 8080
     onOpen: open-browser
 
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart

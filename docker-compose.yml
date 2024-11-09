@@ -5,4 +5,4 @@ services:
       context: .
     init: true
     ports:
-      - 4322:4321
+      - 8080:80
