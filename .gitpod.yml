@@ -3,6 +3,9 @@
 tasks:
   # runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
   - init: |
+      mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+      eval `ssh-agent -s`
+      ssh-add ~/.ssh/id_rsa
       alias kamal='docker run -it --rm -v "${PWD}:/workdir" -v "${SSH_AUTH_SOCK}:/ssh-agent" -v /var/run/docker.sock:/var/run/docker.sock -e "SSH_AUTH_SOCK=/ssh-agent" ghcr.io/basecamp/kamal:latest'
       npm install
     command: npm run dev
