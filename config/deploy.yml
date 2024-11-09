@@ -59,7 +59,6 @@ builder:
 #
 ssh:
   user: sngr-xyz
-  log_level: debug
 # Use a persistent storage volume.
 #
 # volumes:
