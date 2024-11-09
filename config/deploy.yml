@@ -21,7 +21,7 @@ proxy:
   ssl: true
   host: 103.127.137.186.sslip.io
   # Proxy connects to your container on port 80 by default.
-  # app_port: 80
+  app_port: 4321
   healthcheck:
     path: /
 
