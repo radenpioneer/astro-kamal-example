@@ -1,7 +1,10 @@
 ---
 # List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
 tasks:
-  - init: npm install # runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
+  # runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
+  - init: |
+      alias kamal='docker run -it --rm -v "${PWD}:/workdir" -v "${SSH_AUTH_SOCK}:/ssh-agent" -v /var/run/docker.sock:/var/run/docker.sock -e "SSH_AUTH_SOCK=/ssh-agent" ghcr.io/basecamp/kamal:latest'
+      npm install
     command: npm run dev
 
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
