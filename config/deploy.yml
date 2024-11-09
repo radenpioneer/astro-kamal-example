@@ -2,7 +2,7 @@
 service: astro-kamal-example
 
 # Name of the container image.
-image: astro-kamal-example
+image: radenpioneer/astro-kamal-example
 
 # Deploy to these servers.
 servers:
