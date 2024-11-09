@@ -34,7 +34,7 @@ jobs:
       - uses: docker/setup-buildx-action@v3
       - uses: crazy-max/ghaction-github-runtime@v3
       - run: |
-          mkdir -p ~/.ssh && echo $SSH_PRIVATE_KEY > ~/.ssh/key.pem && chmod 600 ~/.ssh/key.pem
+          mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" > ~/.ssh/key.pem && chmod 600 ~/.ssh/key.pem
           eval $(ssh-agent -s) && ssh-add ~/.ssh/key.pem
           ssh-keyscan $SERVER_ADDR >> ~/.ssh/known_hosts
         env:
