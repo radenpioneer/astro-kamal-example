@@ -43,6 +43,7 @@ builder:
     type: gha
     options: mode=max
     image: app-build-cache
+  target: production
 
 # Inject ENV variables into containers (secrets come from .kamal/secrets).
 env:
