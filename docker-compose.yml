@@ -1,0 +1,8 @@
+services:
+  app:
+    container_name: app
+    build:
+      context: .
+    init: true
+    ports:
+      - 8080:4321
