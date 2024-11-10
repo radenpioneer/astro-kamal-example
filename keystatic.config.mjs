@@ -2,9 +2,14 @@
 import { config, fields, singleton } from '@keystatic/core'
 
 export default config({
-  storage: {
-    kind: 'local'
-  },
+  storage: import.meta.env.DEV
+    ? {
+        kind: 'local'
+      }
+    : {
+        kind: 'github',
+        repo: 'radenpioneer/astro-kamal-example'
+      },
 
   singletons: {
     site: singleton({

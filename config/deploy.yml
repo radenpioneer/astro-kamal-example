@@ -43,13 +43,15 @@ builder:
     type: gha
     options: mode=max
     image: app-build-cache
+
 # Inject ENV variables into containers (secrets come from .kamal/secrets).
-#
-# env:
-#   clear:
-#     DB_HOST: 192.168.0.2
-#   secret:
-#     - RAILS_MASTER_KEY
+env:
+  clear:
+    PUBLIC_KEYSTATIC_GITHUB_APP_SLUG: astro-kamal-example
+  secret:
+    - KEYSTATIC_GITHUB_CLIENT_ID
+    - KEYSTATIC_GITHUB_CLIENT_SECRET
+    - KEYSTATIC_SECRET
 
 # Aliases are triggered with "bin/kamal <alias>". You can overwrite arguments on invocation:
 # "bin/kamal logs -r job" will tail logs from the first server in the job section.
