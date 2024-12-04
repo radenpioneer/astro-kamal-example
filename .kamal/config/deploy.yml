@@ -19,7 +19,7 @@ servers:
 # Note: If using Cloudflare, set encryption mode in SSL/TLS setting to "Full" to enable CF-to-app encryption.
 proxy:
   ssl: true
-  host: 103.127.137.186.sslip.io
+  host: 103.127.139.150.sslip.io
   # Proxy connects to your container on port 80 by default.
   app_port: 4321
   healthcheck:
