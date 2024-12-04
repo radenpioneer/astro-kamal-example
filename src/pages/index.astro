@@ -10,10 +10,10 @@ const site = await getEntry('site', 'site')
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
-    <meta name='description' content={site.data.description} />
-    <title>{site.data.title}</title>
+    <meta name='description' content={site?.data.description} />
+    <title>{site?.data.title}</title>
   </head>
   <body>
-    <h1>{site.data.title}</h1>
+    <h1>{site?.data.title}</h1>
   </body>
 </html>

@@ -7,7 +7,7 @@ image: radenpioneer/astro-kamal-example
 # Deploy to these servers.
 servers:
   web:
-    - 103.127.137.186
+    - 103.127.139.150
   # job:
   #   hosts:
   #     - 192.168.0.1
@@ -23,7 +23,7 @@ proxy:
   # Proxy connects to your container on port 80 by default.
   app_port: 4321
   healthcheck:
-    path: /
+    path: /up
 
 # Credentials for your image host.
 registry:
@@ -62,7 +62,7 @@ env:
 # Use a different ssh user than root
 #
 ssh:
-  user: sngr-xyz
+  user: server
 # Use a persistent storage volume.
 #
 # volumes:
