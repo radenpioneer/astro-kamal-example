@@ -39,7 +39,7 @@ jobs:
           ssh-keyscan $SERVER_ADDR >> ~/.ssh/known_hosts
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      - run: bin/kamal deploy --quiet config-file=.kamal/config/deploy.yml
+      - run: bin/kamal deploy --quiet --config-file=.kamal/config/deploy.yml
         env:
           KAMAL_REGISTRY_USERNAME: ${{ github.actor }}
           KAMAL_REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
