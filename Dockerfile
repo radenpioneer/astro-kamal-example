@@ -1,4 +1,4 @@
-FROM oven/bun:1.1.34@sha256:e2c0b11e277f0285e089ffb77ad831faeec2833b9c4b04d6d317f054e587ef4e AS base
+FROM oven/bun:1.1.40@sha256:d3fa18119382d9c6f38b2315d76e3c4749b6e8a28772ecd543bcf0b26775b9e0 AS base
 WORKDIR /app
 COPY package.json bun.lockb ./
 
@@ -12,7 +12,7 @@ FROM build-deps AS build
 COPY . .
 RUN bun run build
 
-FROM oven/bun:1.1.34-alpine@sha256:490d28250f51bf30fd88c3277f43c2c2bd721599d9ae373458c487d27bcb10f3 AS runtime
+FROM oven/bun:1.1.40-alpine@sha256:f6c70b20b96d25b7374cb2f474030a74e78fcdbc6e37c0b3c580d2834051746f AS runtime
 WORKDIR /app
 COPY --from=prod-deps /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist
